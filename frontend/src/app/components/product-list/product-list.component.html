@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <h4>Category: {{currentCategoryName}}</h4>
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- loop over the collection of products -->
+                <div *ngFor="let tempProduct of products" class="col-md-3">
+
+                    <div class="product-box">
+                        <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+                        <a [routerLink]="['/products',tempProduct.id]"><h1>{{ tempProduct.name }}</h1></a> 
+                        <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
+                        <a href="javascript:void(0)" class="primary-btn" (click)="onAddToCart(tempProduct)">Add to cart</a>
+                    </div>
+
+                </div>
+                <div *ngIf="products?.length ===0" class="alert alert-warning col-md-12" role="alert">No products found</div>
+            </div>
+            <div class="footer-pagination">
+                <div class="row">
+                    <div class="col-md-5"><p>Showing {{pageNumber}} to {{totalPages}} of {{totalElements}} entries</p></div>
+                    <div class="col-md-7 text-right">
+                        <div class="row">
+                            <div class="col-md-9" style="padding-left: 40%;">
+                                <ngb-pagination 
+                                [(page)]="pageNumber"
+                                [pageSize]="pageSize"
+                                [collectionSize]="totalElements"
+                                [maxSize]="5"
+                                [boundaryLinks]="true"
+                                (pageChange)="onProductList()"
+                                
+                                ></ngb-pagination>
+                            </div>
+                            <div class="col-md-3 mt-2">
+                                <span class="mr-2">Page Size:</span>
+                                <select (change)="onPageSelect($event.target.value)">
+                                    <option value="5" selected>5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
