@@ -89,3 +89,5 @@ export class CartService {
     this.storage.setItem('cartItems',JSON.stringify(this.cartItems));
   }
 }
+
+// hobby-session-4
