@@ -282,3 +282,5 @@ export class CheckoutComponent implements OnInit {
   }
 
 }
+
+// hobby-session-7
