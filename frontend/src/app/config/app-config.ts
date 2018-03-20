@@ -6,3 +6,5 @@ export default {
     scopes:['openid','profile','email']
   }
 };
+
+// hobby-session-5
