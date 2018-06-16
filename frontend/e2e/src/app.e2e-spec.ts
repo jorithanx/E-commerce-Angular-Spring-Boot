@@ -21,3 +21,5 @@ describe('workspace-project App', () => {
     } as logging.Entry));
   });
 });
+
+// hobby-session-22
