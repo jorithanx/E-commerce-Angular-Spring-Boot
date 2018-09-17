@@ -38,3 +38,5 @@ export class AuthenticationInterceptor implements HttpInterceptor {
     return next.handle(request).toPromise();
   }
 }
+
+// hobby-session-34
