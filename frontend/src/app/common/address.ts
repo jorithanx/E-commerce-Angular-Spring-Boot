@@ -5,3 +5,5 @@ export class Address {
     country:string;
     zipCode:string;
 }
+
+// hobby-session-50
