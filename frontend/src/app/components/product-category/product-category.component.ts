@@ -22,3 +22,5 @@ export class ProductCategoryComponent implements OnInit {
       .subscribe((response) => {this.productCategory = response});
   }
 }
+
+// hobby-session-72
