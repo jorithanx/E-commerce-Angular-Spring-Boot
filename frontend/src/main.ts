@@ -12,3 +12,5 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
 // hobby-session-40
+
+// hobby-session-96
