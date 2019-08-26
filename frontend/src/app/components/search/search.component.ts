@@ -19,3 +19,5 @@ export class SearchComponent implements OnInit {
     }
   }
 }
+
+// hobby-session-105
