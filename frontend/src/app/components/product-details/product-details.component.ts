@@ -47,3 +47,5 @@ export class ProductDetailsComponent implements OnInit {
 // hobby-session-52
 
 // hobby-session-116
+
+// hobby-session-145
